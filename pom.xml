@@ -54,24 +54,24 @@
             <version>2.19.0</version>
         </dependency>
 
-        <dependency>
-    <groupId>org.apache.tika</groupId>
-    <artifactId>tika-core</artifactId>
-    <version>2.9.1</version> <!-- или новее -->
-</dependency>
+            <dependency>
+                <groupId>org.apache.tika</groupId>
+             <artifactId>tika-core</artifactId>
+                <version>2.9.1</version> <!-- или новее -->
+            </dependency>
 
 
-<dependency>
-    <groupId>com.fasterxml.jackson.core</groupId>
-    <artifactId>jackson-core</artifactId>
-    <version>2.16.1</version> <!-- Последняя стабильная версия на 2025 год -->
-</dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.16.1</version> <!-- Последняя стабильная версия на 2025 год -->
+    </dependency>
 
-<dependency>
-    <groupId>commons-codec</groupId>
-    <artifactId>commons-codec</artifactId>
-    <version>1.15</version> <!-- or newer -->
-</dependency>
+    <dependency>
+        <groupId>commons-codec</groupId>
+        <artifactId>commons-codec</artifactId>
+        <version>1.15</version> <!-- or newer -->
+    </dependency>
 
 
     </dependencies>
