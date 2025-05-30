@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>24</maven.compiler.source>
         <maven.compiler.target>24</maven.compiler.target>
-        <aspectj.version>1.9.25</aspectj.version>
+        <aspectj.version>1.9.24</aspectj.version>
         <allure.version>2.24.0</allure.version>
         <jackson.version>2.16.1</jackson.version>
     </properties>
