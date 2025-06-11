@@ -39,11 +39,52 @@ public class ApiCoreRequests {
     }
 
     @Step("Make a POST-request" )
-    public Response makePostRequest(String url, Map<String,String> authData){
+    public  Response makePostRequest(String url, Map<String, String> authData){
         return given()
                 .filter(new AllureRestAssured())
                 .body(authData)
                 .post(url)
                 .andReturn();
     }
+
+    @Step("Make a PUT-request" )
+    public  Response makePutRequestWithoutTokenAndCookie(String url, Map<String, String> authData){
+        return given()
+                .filter(new AllureRestAssured())
+                .body(authData)
+                .put(url)
+                .andReturn();
+    }
+
+    @Step("Make a PUT-request" )
+    public  Response makePutRequestWithTokenAndCookie(String url, Map<String, String> authData,String token,String cookie){
+        return given()
+                .filter(new AllureRestAssured())
+                .header(new Header("x-csrf-token",token))
+                .cookie("auth_sid",cookie)
+                .body(authData)
+                .put(url)
+                .andReturn();
+    }
+
+    @Step("Make a DELETE-request" )
+    public  Response makeDeleteRequest(String url, Map<String, String> authData,String token,String cookie){
+        return given()
+                .filter(new AllureRestAssured())
+                .header(new Header("x-csrf-token",token))
+                .cookie("auth_sid",cookie)
+                .body(authData)
+                .delete(url)
+                .andReturn();
+    }
+
+    @Step("Make a DELETE-request" )
+    public  Response makeDeleteRequest(String url, Map<String, String> authData){
+        return given()
+                .filter(new AllureRestAssured())
+                .body(authData)
+                .delete(url)
+                .andReturn();
+    }
+
 }
